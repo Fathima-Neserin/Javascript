@@ -101,47 +101,38 @@ document.write("<br>");
 var a = 10;
 var b = 20;
 
-document.write(a / b)
+document.write(a / b + "<br>")
 
-document.write("<br>");
 
 // Modulus
 
 var a = 10;
 var b = 3;
 // ans = 1 =10-9
-document.write(a % b)
-
-document.write("<br>");
+document.write(a % b + "<br>")
 
 // Increment
 
 var a = 20;
 a++;
-document.write(a)
+document.write(a + "<br>")
 // a++ = a = a+1;
-
-document.write("<br>");
 
 // Decrement
 
 var a = 20;
 a--;
 // a-- = a = a-1;
-document.write(a)
-
-document.write("<br>");
+document.write(a + "<br>")
 
 // Exponentiation(Power of a number)
 
 var a = 2;
-document.write(a**2);
+document.write(a**2 + "<br>");
 // ans =4
-document.write("<br>");
 var a=10
-document.write(a**3);
+document.write(a**3 + "<br>");
 // ans = 1000
-document.write("<br>");
 
 // Assignment Operators
 // *********************
@@ -151,41 +142,31 @@ document.write("<br>");
 var a=10
 a+=4;
 // ans a= a+4 = 10+4 = 14
-document.write(a);
-
-document.write("<br>");
+document.write(a + "<br>");
 
 // Subtract and assign (-=)
 var a=10
 a-=4;
 // ans a= a-4 = 10-4 = 6
-document.write(a);
-
-document.write("<br>");
+document.write(a + "<br>");
 
 // Multiply and assign (*=)
 var a=10
 a*=4;
 // ans a= a*4 = 10*4 = 40
-document.write(a);
-
-document.write("<br>");
+document.write(a + "<br>");
 
 // Divide and assign (/=)
 var a=10
 a/=4;
 // ans a= a/4 = 10/4 = 2.5
-document.write(a);
-
-document.write("<br>");
+document.write(a + "<br>");
 
 // Modulus and assign (+=)
 var a=10
 a%=4;
 // ans a= a%4 = 10%4 = 2
-document.write(a);
-
-document.write("<br>");
+document.write(a + "<br>");
 
 // Comparison Operatoors
 // *********************
@@ -369,31 +350,21 @@ function add(num1, num2){
 }
 
 var result = add(1, 2);
-document.write(result);
-
-document.write("<br>");
-document.write("<br>");
+document.write(result + "<br>");
 
 // Arrays
 // *********************
 
 var animal = ["Lion", "Cat", "Dog","Tiger", "Fox"];
-document.write(animal);
-document.write("<br>");
-document.write(animal[0]);
-document.write("<br>");
-document.write(animal[1]);
-document.write("<br>");
-document.write(animal[2]);
-document.write("<br>");
-document.write(animal[3]);
-document.write("<br>");
+document.write(animal + "<br>");
+document.write(animal[0] + "<br>");
+document.write(animal[1] + "<br>");
+document.write(animal[2] + "<br>");
+document.write(animal[3] + "<br>");
 
 animal[0] = "Elephant";
-document.write(animal)
-document.write("<br>");
-document.write(animal[0]);
-document.write("<br>");
+document.write(animal + "<br>")
+document.write(animal[0] + "<br>");
 
 var animal = ["Lion", "Cat", "Dog", "Tiger", "Fox"];
 var x = animal.length;
@@ -404,65 +375,51 @@ for (var i = 0; i < x; i++) {
 }
 
  animal[6] = "Cheetah";
- document.write(animal)
- document.write("<br>");
+ document.write(animal + "<br>");
 
  animal.push("Dinosar", "Monkey", "Donkey","Squirrel");
- document.write(animal)
- document.write("<br>");
+ document.write(animal + "<br>");
 
 //  shift  : to delete the first element of an array
 animal.shift();
-document.write(animal)
-
-document.write("<br>");
+document.write(animal + "<br>")
 
 //  pop  : to delete the last element of an array
 animal.pop();
-document.write(animal)
+document.write(animal + "<br>")
 
-document.write("<br>");
 //  splice  : to delete the element/s of an array,2 arguments(1st one index of array, 2nd one how many elements to be deleted from the specified index)
 animal.splice(2, 1);
-document.write(animal)
+document.write(animal + "<br>")
 
-document.write("<br>");
 animal.splice(2, 3);
-document.write(animal)
-document.write("<br>");
+document.write(animal + "<br>")
 
 // sort : te get the elements in alphabetic order
 var animal = ["Lion", "Cat", "Dog", "Tiger", "Fox"];
 animal.sort();
-document.write(animal);
-document.write("<br>");
+document.write(animal + "<br>");
 
 var number = [30, 70, 80, 90, 10, 50];
 
 number.sort();
-document.write(number);
-document.write("<br>");
+document.write(number + "<br>");
 
 // to get the elements in reverse order
 number.reverse();
 document.write(number);
-document.write("<br>");
 
-document.write(number[0] + number[3]);
+document.write(number[0] + number[3] + "<br>");
 // ans = 90+ 50 = 140
-document.write("<br>");
 
 // Strings  : Sequence of charecters, Each charecter is specified as array index
 // *****************************************************************************
 var text = "Java Script";
-document.write(text);
-document.write("<br>");
+document.write(text + "<br>");
 
-document.write(text[0]);
-document.write("<br>");
+document.write(text[0] + "<br>");
 
-document.write(text[5]);
-document.write("<br>");
+document.write(text[5] + "<br>");
 
 // charAt : to get a specific charecter on a speciic index
 document.write(text.charAt(2) + "<br>");
@@ -483,4 +440,109 @@ document.write(msg.toUpperCase() + "<br>");
  
 var text = "Nice to meet you";
 // cut meet from the text, add 1 to the index to get the full part
-document.write(text.slice(7, 12));
+document.write(text.slice(7, 12) + "<br>");
+
+// Math Object
+// *************
+// sqrt: to get the square root of a number
+
+var a = 9;
+document.write(Math.sqrt(a) + "<br>");
+
+var a = 25;
+document.write(Math.sqrt(a) + "<br>");
+
+// abs : to get the positive value of a negative number(positive value's abs value is positive)
+
+var a = -9;
+document.write(Math.abs(a) + "<br>");
+
+var a = -180;
+document.write(Math.abs(a) + "<br>");
+
+// min & max :to get the maximum or minimum number from a set of numbers
+document.write(Math.min(2, 15, 55, 72, 30, 28) + "<br>");
+document.write(Math.max(2, 15, 55, 72, 30, 28) + "<br>");
+
+// pow : to get the power of a number, 2 arguments will be passed, 1st -the specific number, 2nd - the power which we want to calculate
+document.write(Math.pow(3, 2) + "<br>");
+document.write(Math.pow(2, 3) + "<br>");
+document.write(Math.pow(5, 4) + "<br>");
+
+// floor : to round a decimal number to down
+var a = 3.14
+document.write(Math.floor(a) + "<br>");
+
+var a = 10.9
+document.write(Math.floor(a) + "<br>");
+
+// ceil : to round a decimal number to up
+var a = 3.14
+document.write(Math.ceil(a) + "<br>");
+
+var a = 10.9
+document.write(Math.ceil(a) + "<br>");
+
+// round : normal rounding method
+var a = 3.14
+document.write(Math.round(a) + "<br>");
+
+var a = 10.9
+document.write(Math.round(a) + "<br>");
+
+// random : to generate some numbers(client can't predict, computer is generating)
+document.write(Math.random() + "<br>");
+// to get rounded random numbers
+// 0
+var roundedRandom = Math.floor(Math.random());
+document.write(roundedRandom + "<br>");
+// 1-10
+var a = Math.random();
+var roundedRandom = Math.floor( a * 10);
+document.write(roundedRandom + "<br>");
+// 1-100
+var a = Math.random();
+var roundedRandom = Math.floor( a * 100);
+document.write(roundedRandom + "<br>");
+
+// Document - Object Model (DOM) : used to create dynamic webpages(change html element css properties)
+// *****************************
+// GET element by ID
+var heading = document.getElementById("head1");
+heading.innerHTML = "Java Script Basics";
+heading.style.color = "brown";
+
+document.write("<br>");
+
+// GET element by className
+var heading2 = document.getElementsByClassName("head2");
+console.log(heading2);
+
+// to access a specific document  from the class html collection
+
+heading2[0]. innerHTML = "Title";
+heading2[2].style.fontStyle = "italic"
+heading2[1].style.backgroundColor = "blue";
+
+// GET element by tagName
+var heading3 = document.getElementsByTagName("p");
+console.log(heading3);
+
+// to access a specific document  from the tag html collection
+
+heading3[2].style.fontWeight = "700";
+heading3[1].style.display = "flex"; // Set the display to flex
+heading3[1].style.justifyContent = "center"; // Center horizontally
+heading3[1].style.alignItems = "center"; // Center vertically
+heading3[0].style.backgroundColor = "green";
+
+// GET elements by Name 
+var a = document.getElementsByName("text")[0];
+console.log(a);
+var b = document.getElementById("head");
+
+function message(){
+    b.innerHTML = " Hello " + a.value;
+
+}
+
