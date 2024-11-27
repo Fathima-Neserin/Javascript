@@ -341,3 +341,146 @@ do{
     document.write(i + "<br>");
     i++
 }while(i<=5);
+
+document.write("<br>");
+
+// Functions
+// *********************
+
+function greetings(value) {
+    document.write("Good Morning " + value + "<br>");
+}
+
+function showMessage() {
+    const name = document.getElementById("nameInput").value || "Guest";
+    greetings(name);
+}
+
+function sum(num1, num2){
+    document.write(num1 + num2);
+}
+
+sum(10, 20);
+
+document.write("<br>");
+
+function add(num1, num2){
+    return num1 + num2;
+}
+
+var result = add(1, 2);
+document.write(result);
+
+document.write("<br>");
+document.write("<br>");
+
+// Arrays
+// *********************
+
+var animal = ["Lion", "Cat", "Dog","Tiger", "Fox"];
+document.write(animal);
+document.write("<br>");
+document.write(animal[0]);
+document.write("<br>");
+document.write(animal[1]);
+document.write("<br>");
+document.write(animal[2]);
+document.write("<br>");
+document.write(animal[3]);
+document.write("<br>");
+
+animal[0] = "Elephant";
+document.write(animal)
+document.write("<br>");
+document.write(animal[0]);
+document.write("<br>");
+
+var animal = ["Lion", "Cat", "Dog", "Tiger", "Fox"];
+var x = animal.length;
+document.write(x + "<br>"); // Display the length of the array
+
+for (var i = 0; i < x; i++) {
+    document.write(animal[i] + "<br>");
+}
+
+ animal[6] = "Cheetah";
+ document.write(animal)
+ document.write("<br>");
+
+ animal.push("Dinosar", "Monkey", "Donkey","Squirrel");
+ document.write(animal)
+ document.write("<br>");
+
+//  shift  : to delete the first element of an array
+animal.shift();
+document.write(animal)
+
+document.write("<br>");
+
+//  pop  : to delete the last element of an array
+animal.pop();
+document.write(animal)
+
+document.write("<br>");
+//  splice  : to delete the element/s of an array,2 arguments(1st one index of array, 2nd one how many elements to be deleted from the specified index)
+animal.splice(2, 1);
+document.write(animal)
+
+document.write("<br>");
+animal.splice(2, 3);
+document.write(animal)
+document.write("<br>");
+
+// sort : te get the elements in alphabetic order
+var animal = ["Lion", "Cat", "Dog", "Tiger", "Fox"];
+animal.sort();
+document.write(animal);
+document.write("<br>");
+
+var number = [30, 70, 80, 90, 10, 50];
+
+number.sort();
+document.write(number);
+document.write("<br>");
+
+// to get the elements in reverse order
+number.reverse();
+document.write(number);
+document.write("<br>");
+
+document.write(number[0] + number[3]);
+// ans = 90+ 50 = 140
+document.write("<br>");
+
+// Strings  : Sequence of charecters, Each charecter is specified as array index
+// *****************************************************************************
+var text = "Java Script";
+document.write(text);
+document.write("<br>");
+
+document.write(text[0]);
+document.write("<br>");
+
+document.write(text[5]);
+document.write("<br>");
+
+// charAt : to get a specific charecter on a speciic index
+document.write(text.charAt(2) + "<br>");
+document.write(text.charAt(8) + "<br>");
+
+// concat : to add two strings
+var text1 = " Learn ";
+var text2 = " Java Script ";
+document.write(text1.concat(text2) + "<br>");
+
+// toLowerCase & toUpperCase
+
+var msg = "Fathima Nezrin";
+document.write(msg.toLowerCase() + "<br>");
+document.write(msg.toUpperCase() + "<br>");
+
+// slice  : to cut a part of text from the given text,2 arguments(1st one index of string charecter, 2nd one how many elements to be cut from the specified index)
+ 
+var text = "Nice to meet you";
+// cut meet from the text, add 1 to the index to get the full part
+document.write(text.slice(7, 12));
