@@ -1,3 +1,5 @@
+// *****************************************************************************************************************************************************************************************
+
 document.write("Welcome to JS learning");
 // alert("Fathima Nezrin, you are a stupid...hahahaha..");
 console.log("Same to you brother");
@@ -518,7 +520,7 @@ document.write("<br>");
 var heading2 = document.getElementsByClassName("head2");
 console.log(heading2);
 
-// to access a specific document  from the class html collection
+// to access a specific document  from the class html collection {Node list will see in the console}
 
 heading2[0]. innerHTML = "Title";
 heading2[2].style.fontStyle = "italic"
@@ -528,7 +530,7 @@ heading2[1].style.backgroundColor = "blue";
 var heading3 = document.getElementsByTagName("p");
 console.log(heading3);
 
-// to access a specific document  from the tag html collection
+// to access a specific document  from the tag html collection {Node list will see in the console}
 
 heading3[2].style.fontWeight = "700";
 heading3[1].style.display = "flex"; // Set the display to flex
@@ -543,6 +545,114 @@ var b = document.getElementById("head");
 
 function message(){
     b.innerHTML = " Hello " + a.value;
+}
+
+// GET element by CSS selectors
+// querySelectorAll (access by className){Node list will see in the console}
+var a = document.querySelectorAll(".hClass");
+console.log(a);
+a[0].innerHTML = "Learn HTML";
+a[1].style.fontFamily = "sans-serif";
+a[2].innerHTML = "Python is very easy";
+
+// querySelector (access by idName)
+var a = document.querySelector("#head3");
+console.log(a);
+a.innerHTML = "Learn HTML Basics";
+
+// Create & Remove Elements using DOM
+
+var someHeading = document.createElement("h1");
+
+function create(){
+    someHeading.innerHTML = "Hello Guyzzz";
+    document.body.appendChild(someHeading);
+}
+
+function remove(){
+    someHeading.remove();
+}
+
+// Create Events using DOM
+
+var heading4 = document.getElementById("head4");
+var btn = document.getElementById("btn");
+
+btn.addEventListener("click", changeColor);
+heading4.addEventListener("mouseover", changeBgColor);
+
+function changeColor(){
+    heading4.style.color = "Green";
+}
+
+function changeBgColor(){
+    heading4.style.backgroundColor = "pink";
+}
+
+// Object Oriented Programming (OOP)
+// *********************************
+
+let employee = {
+    name : "Fathima Nezrin",
+    position : "Developer",
+    salary : 20000,
+    getsalary : function(){
+        document.write("Salary of " + this.name + " is " + this.salary);
+    }
+}
+
+console.log(employee);
+document.write(employee.name + "<br>");
+document.write(employee.position + "<br>");
+document.write(employee.salary + "<br>");
+employee.getsalary();
+
+document.write("<br>");
+// class    : to create more than one object
+
+class Employee{
+    constructor(name, position, salary){
+        this.name = name
+        this.position = position;
+        this.salary = salary;
+    }
+    getSalary(){
+        document.write("Salary of " + this.name + " is " + this.salary);
+
+    }
+}
+
+let Emp1 = new Employee("Rafi", "CMA", 100000);
+Emp1.getSalary();
+document.write("<br>")
+document.write(Emp1.name + "<br>");
+
+let Emp2 = new Employee("Rafina", "Baker", 45000);
+document.write(Emp2.position + "<br>");
+document.write(Emp2.name + "<br>");
+
+let Emp3 = new Employee("Sinan", "Assistant Professor", 40000);
+document.write(Emp3.name + "<br>");
+document.write(Emp3.position + "<br>");
+
+// OOP Inheritance : Parent child relation between classes (Employee -Parent class, Manager & Supervisor are child classes)
+class Manager extends Employee{
 
 }
+
+class Supervisor extends Employee{
+
+} 
+
+let m1 = new Manager("Ashraf", "HR Manager", 1800000);
+document.write(m1.salary + "<br>");
+m1.getSalary();
+
+document.write("<br>");
+
+let s1 = new Supervisor("Resheeda", "Supervisor", 60000);
+document.write(s1.name + "<br>");
+document.write(s1.position + "<br>");
+
+// *****************************************************************************************************************************************************************************
 
